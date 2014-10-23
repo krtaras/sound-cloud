@@ -27,12 +27,10 @@
 		if (!SC.isConnected()) {
 			SC.connect(function() {
 				document.cookie="soundCloudToken=" + SC.accessToken();
-				alert(SC.accessToken());
-				parent.postMessage("test", "*");
+				parent.postMessage(SC.accessToken(), "*");
 			});
 		} else {
-			alert(SC.accessToken());
-			parent.postMessage("test", "*");
+			parent.postMessage(SC.accessToken(), "*");
 		}
 	</script>
 </head>
