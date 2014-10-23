@@ -21,11 +21,11 @@
 			SC.connect(function() {
 				document.cookie="soundCloudToken=" + SC.accessToken();
 				soundCloud = new SoundCloud();
-				parent.test();
+				alert("asd");
 			});
 		} else {
 			soundCloud = new SoundCloud();
-			parent.test();
+			alert("asd");
 		}
 
 		function showPlaylist() {
