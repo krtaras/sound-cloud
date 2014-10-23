@@ -1,0 +1,144 @@
+.tabs-block {
+	width: 250px;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px; 
+	background-color: #252525;
+	border-left:3px solid #FF6300;
+	border-right:3px solid #FF6300;
+}
+.tabs {
+	position: relative;
+	width: 240px;
+	height: 30px;
+}
+
+.left-tab {
+	float: left;
+}
+
+.right-tab {
+	float: right;
+}
+
+.tab {
+	width: 115px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #252525;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.inactive-tab {
+	margin-top: 1px;
+	border: none;
+	border-bottom: 2px solid #FF6300;
+	color: gray;
+}
+
+.active-tab {
+	border: 1px solid #FF6300;
+	border-bottom: 2px solid #252525;
+	color: white;
+}
+
+.content {
+	margin-top: -4px;
+	width: 250px;
+	max-height: 400px;
+	background-color: #252525;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top: 2px solid #FF6300;
+	border-left: 3px solid #FF6300;
+	border-right: 3px solid #FF6300;
+	border-bottom: 3px solid #FF6300;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#content::-webkit-scrollbar{
+	width:1px;
+	background-color: transparent;
+}
+
+.row {
+	margin-top: 5px;
+	padding: 5px;
+	width: 236px;
+	height: 40px;
+	border: 1px solid #170900;
+	background: url(img/fon2.png) repeat-x;
+	border-radius: 10px;
+}
+
+.picture {
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+.row-content {
+	width: 190px;
+	height: 40px;
+	float: right;
+}
+
+.img {
+	height: 40px;
+	width: 40px;
+}
+
+.label {
+	padding-left: 5px;
+	height: 40px;
+	width: 131px;
+	float: left;
+	color: white;
+	vertical-align: middle;
+	line-height: 40px;
+	border-left: 2px dashed #FF6300;
+	overflow:hidden;
+}
+.label-border {
+	width: 5px;
+	height: 40px;
+	float: left;
+	border-right: 2px dashed #FF6300;
+}
+
+.button {
+	float: right;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.button:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+.button:hover .play {
+	border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #FF0A00;
+ }
+
+.button .play {
+    position:relative;
+    top: 10px;
+    left: 40%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #FF6300;
+} 
