@@ -8,6 +8,17 @@
 	<script>
 		var soundCloud;
 
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i=0; i<ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0)==' ') c = c.substring(1);
+		        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+		    }
+		    return "";
+		}
+
 		SC.initialize({
 			client_id: 'c0e833fecbe9557b9ba8e676b4786b3a',
 			redirect_uri: '//krtaras.github.io/sound-cloud/callback.html',
@@ -19,12 +30,12 @@
 			SC.connect(function() {
 				document.cookie="soundCloudToken=" + SC.accessToken();
 				soundCloud = new SoundCloud();
-				alert("asd");
+				alert(SC.accessToken());
 				parent.postMessage(soundCloud, "*");
 			});
 		} else {
 			soundCloud = new SoundCloud();
-			alert("asd");
+			alert(SC.accessToken());
 			parent.postMessage(soundCloud, "*");
 		}
 	</script>
