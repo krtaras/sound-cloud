@@ -4,9 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="utils.js"></script>
 	<script src="https://connect.soundcloud.com/sdk.js"></script>
-	<script type="text/javascript" src="source.js"></script>
 	<script>
 		var soundCloud;
 
@@ -22,75 +20,15 @@
 				document.cookie="soundCloudToken=" + SC.accessToken();
 				soundCloud = new SoundCloud();
 				alert("asd");
-				parent.postMessage("child frame", "*");
+				parent.postMessage(soundCloud, "*");
 			});
 		} else {
 			soundCloud = new SoundCloud();
 			alert("asd");
-			parent.postMessage("child frame", "*");
-		}
-
-		function showPlaylist() {
-			soundCloud.getMyPlaylists();
-			selectRightTab();
-		}
-
-		function showStream() {
-			soundCloud.getMyStream();
-			selectLeftTab();
-		}
-
-		function test() {
-			soundCloud.attach();
-		}
-
-		function pause() {
-			soundCloud.pause();
-		}
-
-		function play() {
-			soundCloud.play();
-		}
-
-		function prev() {
-			soundCloud.stop();
-			soundCloud.prev();
-		}
-
-		function next() {
-			soundCloud.stop();
-			soundCloud.next();
-		}
-
-		function startPlayTrack(id) {
-			soundCloud.stop();
-			soundCloud.startPlayTrack(id);
+			parent.postMessage(soundCloud, "*");
 		}
 	</script>
 </head>
 <body>
-<button onclick="test();">Attach</button>
-<button onclick="play();">Play</button>
-<button onclick="pause();">Pause</button>
-<button onclick="next();">Next</button>
-<button onclick="prev();">Prev</button>
-	<div class="main">
-		
-	</div>
-
-	<div class="tabs-block">
-		<div class="tabs">
-			<div id="leftTab" class=" tab left-tab" onclick="showStream();">
-				<span>Stream</span>
-			</div>
-			<div id="rightTab" class=" tab right-tab" onclick="showPlaylist();">
-				<span>Playlists</span>
-			</div>
-		</div>
-	</div>
-	
-	<div class="content" id="content">
-		
-	</div>
 </body>
 </html>
