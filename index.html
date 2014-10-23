@@ -22,12 +22,12 @@
 				document.cookie="soundCloudToken=" + SC.accessToken();
 				soundCloud = new SoundCloud();
 				alert("asd");
-				window.parent.test();
+				parent.postMessage("child frame", "*");
 			});
 		} else {
 			soundCloud = new SoundCloud();
 			alert("asd");
-			window.parent.test();
+			parent.postMessage("child frame", "*");
 		}
 
 		function showPlaylist() {
