@@ -28,11 +28,13 @@
 			SC.connect(function() {
 				document.cookie="soundCloudToken=" + SC.accessToken();
 				//alert(SC.accessToken());
-				opener.postMessage(SC.accessToken(), "*");
+				//opener.postMessage(SC.accessToken(), "*");
+				window.parent.postMessage(SC.accessToken(), "*");
 			});
 		} else {
 			//alert(SC.accessToken());
-			opener.postMessage(SC.accessToken(), "*");
+			//opener.postMessage(SC.accessToken(), "*");
+			window.parent.postMessage(SC.accessToken(), "*");
 		}
 	</script>
 </head>
