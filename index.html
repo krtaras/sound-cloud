@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://connect.soundcloud.com/sdk.js"></script>
 	<script>
@@ -18,7 +17,6 @@
 		}
 		
 		function connect() {
-			document.body.style.backgroundColor='red';
 			SC.initialize({
 				client_id: 'c0e833fecbe9557b9ba8e676b4786b3a',
 				redirect_uri: 'http://krtaras.github.io/sound-cloud/callback.html',
@@ -30,20 +28,35 @@
 				SC.connect(function() {
 					document.cookie="soundCloudToken=" + SC.accessToken();
 					document.getElementById("token").value = SC.accessToken();
-				//	port.postMessage({access_token : SC.accessToken()}); 
-				//	close();
 				});
 			} else {
 				document.getElementById("token").value = SC.accessToken();
-			//	port.postMessage({access_token : SC.accessToken()}); 
-			//	close();
 			}
-			document.body.style.backgroundColor='blue';
 		}
 	</script>
+	<style>
+		body {
+			padding: 5px;
+		}
+		.message {
+			width:300px;
+			height:150px;
+			line-height: 40px;
+			vertical-align: middle;
+			text-align: center;
+			background-color: #252525;
+			color: white;
+			font-size: 50px;
+			border:2px solid #FF6300;
+			border-radius: 10px;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" id="token" name="token" value="" />
+	<div class="message">
+		Connecting to Sound Cloud...
+	</div>
+	<input type="hiden" id="token" name="token" value="" />
 	<script>connect();</script>
 </body>
 </html>
