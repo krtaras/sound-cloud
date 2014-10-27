@@ -3,7 +3,24 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Connect with SoundCloud</title>
   </head>
+  <style>
+    body {
+      background-color: #252525;
+    }
+    .message {
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      vertical-align: middle;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 23px;
+      border: 2px solid #FF6300;
+      border-radius: 10px;
+    }
+  </style>
   <body onload="window.opener.setTimeout(window.opener.SC.connectCallback, 1)">
-    <b style="width: 100%; text-align: center;">This popup should automatically close in a few seconds</b>
+    <div class="message">This popup should automatically close in a few seconds</div>
   </body>
 </html>
