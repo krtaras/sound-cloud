@@ -1,4 +1,4 @@
-sound-cloud
+sound-cloud-extension
 ===========
 
-sound-cloud
+sound-cloud-extension
